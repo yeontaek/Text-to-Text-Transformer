@@ -3,6 +3,12 @@ Text to Text QA task
 
 
 
+
+## Pre training
+
+
+## Fine Tuning(QA Task)
+
 ## Reference
 
 * [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/abs/1910.10683)<br>
