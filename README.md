@@ -4,10 +4,12 @@
 
 
 
-## Pre training
+## Pre-training
+
+### 1.Objective 
 
 
-## Fine Tuning(QA Task)
+## Fine-Tuning(QA Task)
 
 ## Reference
 
