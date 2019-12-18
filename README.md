@@ -5,7 +5,7 @@
 * Text-to-Text Transformer-Base, Korean Model: 12-layer, 768-hidden, 12-heads(비공개)
 * Text-to-Text Transformer-Small, Korean Model: 6-layer, 512-hidden, 8-heads(비공개)
 
-<img src = "https://github.com/changwookjun/Transformer/raw/master/images/1.png" width=80%>
+<img src = "https://github.com/changwookjun/Transformer/raw/master/images/1.png" width=50%>
 
 
 ## Pre-training
