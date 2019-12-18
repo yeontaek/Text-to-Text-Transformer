@@ -10,7 +10,7 @@
 
 ## Pre-training
 
-### 1.Unsupervised objectives 
+### 1.Unsupervised objective
 
 T5 논문에서 가장 성능이 잘 나온다고 서술된 BERT Style Objective로 문장을 구성하여 학습을 진행했다. BERT와 동일하게 입력 문장의 15%를 Random 하게 마스킹 처리했다. 마스킹 대상의 80%는 <MASK>토큰으로 대체하며, 10%는 사전 내 임의의 토큰으로 나머지 10%는 원래의 단어를 그대로 사용했다.
 
@@ -28,7 +28,7 @@ Target 문장 :
 ```
 
 
-### 3.Use TPU
+### 3.Unlabeld dataset
 
 
 ### 4.Parameter
