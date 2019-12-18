@@ -9,14 +9,22 @@
 ### 1.Objective 
 
 
-### 2.Example
+### 2.문장 구성
+
+
+
+### 3.Use TPU
 
 
 ## Fine-Tuning(QA Task)
 
 
 
+
 ## 성능 비교
+
+
+
 
 ## Reference
 
