@@ -18,6 +18,9 @@
 
 ### 4.Parameter
 
+> Base.This is our baseline model, whose hyperparameters are described in Section 3.1.1. It has roughly 220million parameters.
+> Small. We consider a smaller model, which scales the baseline down by usingdmodel= 512,dff= 2,048, 8-headed attention, and only 6layers each in the encoder and decoder. This varianthas about 60million parameters.
+
 
 ## Fine-Tuning(QA Task)
 
