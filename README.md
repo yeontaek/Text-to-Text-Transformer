@@ -10,7 +10,7 @@
 
 
 
-<img src = "https://yhdosu.github.io/assets/images/T5/T5_6.png" width=65%>
+<img src = "https://yhdosu.github.io/assets/images/T5/T5_6.png" width=80%>
 
 ### 2.문장 구성
 
