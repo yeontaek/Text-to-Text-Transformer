@@ -18,7 +18,7 @@ T5 논문에서 가장 성능이 잘 나온다고 서술된 BERT Style Objective
 ### 2.문장 구성
 
 ```
-Input 문장 :
+Input 문장 : 
 
 
 Target 문장 : 
@@ -39,7 +39,7 @@ Target 문장 :
 
 
 
-## 성능 비교
+## Requirement
 
 
 
