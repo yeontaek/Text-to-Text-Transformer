@@ -9,6 +9,9 @@
 ### 1.Objective 
 
 
+
+<img src = "https://yhdosu.github.io/assets/images/T5/T5_6.png" width=65%>
+
 ### 2.문장 구성
 
 
