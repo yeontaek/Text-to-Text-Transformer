@@ -1,5 +1,6 @@
 # Text-to-Text Transformer
 
+본 repository에서는 Google의 [T5(T5: Text-To-Text Transfer Transformer)](https://arxiv.org/abs/1910.10683)의 text-to-text 형태로 한국어 QA Task를 해결하고자 한다.
 
 * Text-to-Text Transformer-Base, Korean Model: 12-layer, 768-hidden, 12-heads(비공개)
 * Text-to-Text Transformer-Small, Korean Model: 6-layer, 512-hidden, 8-heads(비공개)
