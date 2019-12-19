@@ -12,7 +12,7 @@
 
 ### 1.Unsupervised objective
 
-T5 논문에서 가장 성능이 잘 나온다고 서술된 BERT Style Objective로 문장을 구성하여 학습을 진행했다. BERT와 동일하게 입력 문장의 15%를 Random 하게 마스킹 처리했다. 마스킹 대상의 80%는 <MASK>토큰으로 대체하며, 10%는 사전 내 임의의 토큰으로 나머지 10%는 원래의 단어를 그대로 사용했다.
+T5 논문에서 가장 성능이 잘 나온다고 서술된 BERT Style Objective로 문장을 구성하여 사전 학습을 진행했다. BERT와 동일하게 입력 문장의 15%를 Random 하게 마스킹 처리했다. 마스킹 대상의 80%는 <MASK>토큰으로 대체하며, 10%는 사전 내 임의의 토큰으로 나머지 10%는 원래의 단어를 그대로 사용했다.
 
 <img src = "https://yhdosu.github.io/assets/images/T5/T5_6.png" width=80%>
 <img src = "https://yhdosu.github.io/assets/images/T5/T5_7.png" width=80%>
@@ -21,7 +21,7 @@ T5 논문에서 가장 성능이 잘 나온다고 서술된 BERT Style Objective
 ### 2.문장 구성
 
 ```
-Input 문장 : 1900년, <MASK> <MASK> 푸치니의 오페라 토스카로 `다양하게` 각색되었다.
+Input 문장 : 1900년, <MASK> <MASK> 푸치니의 오페라 토스카로 `인라인 코드 블럭`	 각색되었다.
 
 
 Target 문장 : 1900년, 사르두의 연극은 푸치니의 오페라 토스카로 새롭게 각색되었다. (original text)
