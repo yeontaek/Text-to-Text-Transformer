@@ -21,7 +21,7 @@ T5 논문에서 가장 성능이 잘 나온다고 서술된 BERT Style Objective
 ### 2.문장 구성
 
 ```
-Input 문장 : 1900년, <MASK> <MASK> 푸치니의 오페라 토스카로 `인라인 코드 블럭`	 각색되었다.
+Input 문장 : 1900년, <MASK> <MASK> 푸치니의 오페라 토스카로 '다양하게' 각색되었다. (BERT Style)
 
 
 Target 문장 : 1900년, 사르두의 연극은 푸치니의 오페라 토스카로 새롭게 각색되었다. (original text)
