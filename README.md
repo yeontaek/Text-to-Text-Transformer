@@ -10,9 +10,9 @@
 > Small. We consider a smaller model, which scales the baseline down by using dmodel= 512, dff= 2,048, 8-headed attention, and only 6layers each in the encoder and decoder. This varianthas about 60million parameters.
 
 
-## Pre-training
+## 1. Pre-training
 
-### 1.Unsupervised objective
+### 1.1 Unsupervised objective
 
 T5 논문에서 가장 성능이 잘 나온다고 서술된 BERT Style Objective로 문장을 구성하여 사전 학습을 진행했다. BERT와 동일하게 입력 문장의 15%를 Random 하게 마스킹 처리했다. 마스킹 대상의 80%는 <MASK>토큰으로 대체하며, 10%는 사전 내 임의의 토큰으로 나머지 10%는 원래의 단어를 그대로 사용했다.
 
@@ -20,7 +20,7 @@ T5 논문에서 가장 성능이 잘 나온다고 서술된 BERT Style Objective
 <img src = "https://yhdosu.github.io/assets/images/T5/T5_7.png" width=80%>
 
 
-### 2.문장 구성
+### 1.2 문장 구성
 
 ```
 Input 문장 : 1900년, <MASK> <MASK> 푸치니의 오페라 토스카로 '다양하게' 각색되었다. (BERT Style)
@@ -30,7 +30,7 @@ Target 문장 : 1900년, 사르두의 연극은 푸치니의 오페라 토스카
 ```
 
 
-### 3.Unlabeld dataset
+### 1.3 Unlabeld dataset
 학습 데이터는 **한국어 위키데이터(2019.01 dump file 기준, 약 350만 문장)** 을 사용하여 학습을 진행했다. 
  
 ~~~
@@ -44,7 +44,11 @@ Target 문장 : 1900년, 사르두의 연극은 푸치니의 오페라 토스카
 ~~~
 
 
-### 4. 학습 예
+### 1.4 학습 예
+
+```
+pip install transformer-korea
+```
 
 
 ## Fine-Tuning
