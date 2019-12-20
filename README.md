@@ -20,7 +20,7 @@ T5 논문에서 가장 성능이 잘 나온다고 서술된 BERT Style Objective
 <img src = "https://yhdosu.github.io/assets/images/T5/T5_7.png" width=80%>
 
 
-### 1.2 문장 구성
+### 1.2 문장 예시
 
 ```
 Input 문장 : 1900년, <MASK> <MASK> 푸치니의 오페라 토스카로 '다양하게' 각색되었다. (BERT Style)
