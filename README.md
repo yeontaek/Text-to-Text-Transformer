@@ -5,7 +5,9 @@
 * Text-to-Text Transformer-Base, Korean Model: 12-layer, 768-hidden, 12-heads(비공개)
 * Text-to-Text Transformer-Small, Korean Model: 6-layer, 512-hidden, 8-heads(비공개)
 
-<img src = "https://cdn-images-1.medium.com/max/1200/1*HunNdlTmoPj8EKpl-jqvBA.png" width=50%>
+
+> Base This is our baseline model, whose hyperparameters are described in Section 3.1.1. It has roughly 220million parameters.
+> Small. We consider a smaller model, which scales the baseline down by using dmodel= 512, dff= 2,048, 8-headed attention, and only 6layers each in the encoder and decoder. This varianthas about 60million parameters.
 
 
 ## Pre-training
@@ -42,10 +44,7 @@ Target 문장 : 1900년, 사르두의 연극은 푸치니의 오페라 토스카
 ~~~
 
 
-### 4.Parameter
-
-> Base This is our baseline model, whose hyperparameters are described in Section 3.1.1. It has roughly 220million parameters.
-> Small. We consider a smaller model, which scales the baseline down by using dmodel= 512, dff= 2,048, 8-headed attention, and only 6layers each in the encoder and decoder. This varianthas about 60million parameters.
+### 4. 학습 예
 
 
 ## Fine-Tuning
