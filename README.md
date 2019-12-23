@@ -46,8 +46,55 @@ Target 문장 : 1900년, 사르두의 연극은 푸치니의 오페라 토스카
 
 ### 1.4 학습 예
 
-```
+```python
 pip install transformer-korea
+
+path = "ko-wiki_20190621.txt"
+# Data Processing
+print('Loading Pre-training data')
+data_preprocess = DataProcessor(csv_path=path, batch_size=64, pre_train=True)
+train = data_preprocess.load_data_txt()
+
+print('Loading Vocab File')
+vocab = data_preprocess.load_vocab_file(vocab_filename="vocab")
+
+
+print('Create train dataset')
+train_dataset = data_preprocess.preprocess(train)
+
+# HPARAMS
+EPOCHS = 100
+num_layers = 6
+d_model = 128
+dff = 512
+num_heads = 8
+vocab_size = vocab.vocab_size
+dropout_rate = 0.1
+
+# Custom Scheduler
+learning_rate = CustomSchedule(d_model, warmup_steps=4000)
+optimizer = tf.keras.optimizers.Adam(learning_rate, beta_1=0.9, beta_2=0.98, epsilon=1e-9)
+
+# Transformer
+transformer = Transformer(d_model=d_model,
+                          num_heads=num_heads,
+                          num_layers=num_layers,
+                          vocab_size=vocab_size,
+                          dff=dff,
+                          enc_activation='gelu',
+                          dec_activation='relu',
+                          rate=dropout_rate)
+
+# Trainer
+trainer = Trainer(train_dataset=train_dataset,
+                  learning_rate=learning_rate,
+                  optimizer=optimizer,
+                  transformer=transformer,
+                  epochs=EPOCHS,
+                  checkpoint_path='./models/checkpoints/',
+                  load_checkpoints=True,
+                  save_checkpoints_epochs=10)
+trainer.train()
 ```
 
 
