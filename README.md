@@ -61,7 +61,9 @@ pip install transformer-korea
 
 
 ## To-DO
-[x] TPU, Multi-GPU 지원
+- [x] TPU, Multi-GPU 지원
+- [ ] this is an incomplete item 
+
 
 ## Reference
 
