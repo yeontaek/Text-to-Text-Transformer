@@ -108,7 +108,7 @@ trainer.train()
 ### 1.QA Task
 
 ### 1.1 Labeld dataset
-QA Task를 위해 한국어 QA Dataset인 [KorQuAD 1.1](https://korquad.github.io/category/1.0_KOR.html)을 사용하여 Fine-Tuning 하도록 하였습니다. 데이터 구성은 아래와 같습니다.
+QA Task를 위해 한국어 QA Dataset인 [KorQuAD 1.1](https://korquad.github.io/category/1.0_KOR.html)을 사용하여 Fine-Tuning 하도록 구성했습니다. 데이터 구성은 아래와 같습니다. input은 question, target은 answer가 되도록 했습니다. 
 
 ~~~
 Q
