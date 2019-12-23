@@ -52,12 +52,12 @@ pip install transformer-korea
 path = "ko-wiki_20190621.txt"
 # Data Processing
 print('Loading Pre-training data')
-data_preprocess = DataProcessor(csv_path=path, batch_size=64, pre_train=True)
+data_preprocess = DataProcessor(txt_path=path, batch_size=64, pre_train=True)
 train = data_preprocess.load_data_txt()
 
 print('Loading Vocab File')
+#data_processor.tokenizer_train(train_data=train,vocab_size=2 ** 13,vocab_filename="vocab")
 vocab = data_preprocess.load_vocab_file(vocab_filename="vocab")
-
 
 print('Create train dataset')
 train_dataset = data_preprocess.preprocess(train)
@@ -70,6 +70,8 @@ dff = 512
 num_heads = 8
 vocab_size = vocab.vocab_size
 dropout_rate = 0.1
+encoder_activation = 'gelu'
+decoder_activation = 'relu'
 
 # Custom Scheduler
 learning_rate = CustomSchedule(d_model, warmup_steps=4000)
@@ -81,8 +83,8 @@ transformer = Transformer(d_model=d_model,
                           num_layers=num_layers,
                           vocab_size=vocab_size,
                           dff=dff,
-                          enc_activation='gelu',
-                          dec_activation='relu',
+                          enc_activation=encoder_activation,
+                          dec_activation=decoder_activation,
                           rate=dropout_rate)
 
 # Trainer
@@ -92,7 +94,7 @@ trainer = Trainer(train_dataset=train_dataset,
                   transformer=transformer,
                   epochs=EPOCHS,
                   checkpoint_path='./models/checkpoints/',
-                  load_checkpoints=False,
+                  load_checkpoints=True,
                   save_checkpoints_epochs=10)
 trainer.train()
 ```
@@ -121,6 +123,7 @@ data_preprocess = DataProcessor(csv_path=[question, answer],batch_size=64, pre_t
 train = data_preprocess.load_data_csv()
 
 print('Loading Vocab File')
+#data_processor.tokenizer_train(train_data=train,vocab_size=2 ** 13,vocab_filename="vocab")
 vocab = data_preprocess.load_vocab_file(vocab_filename="vocab")
 
 print('Create train dataset')
@@ -134,6 +137,8 @@ dff = 512
 num_heads = 8
 vocab_size = vocab.vocab_size
 dropout_rate = 0.1
+encoder_activation = 'gelu'
+decoder_activation = 'relu'
 
 # Custom Scheduler
 learning_rate = CustomSchedule(d_model, warmup_steps=4000)
@@ -145,8 +150,8 @@ transformer = Transformer(d_model=d_model,
                           num_layers=num_layers,
                           vocab_size=vocab_size,
                           dff=dff,
-                          enc_activation = 'gelu',
-                          dec_activation = 'relu',
+                          enc_activation = encoder_activation,
+                          dec_activation = decoder_activation,
                           rate=dropout_rate)
 
 # Trainer
