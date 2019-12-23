@@ -56,7 +56,6 @@ data_preprocess = DataProcessor(txt_path=path, batch_size=64, pre_train=True)
 train = data_preprocess.load_data_txt()
 
 print('Loading Vocab File')
-#data_processor.tokenizer_train(train_data=train,vocab_size=2 ** 13,vocab_filename="vocab")
 vocab = data_preprocess.load_vocab_file(vocab_filename="vocab")
 
 print('Create train dataset')
