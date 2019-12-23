@@ -71,8 +71,22 @@ def gelu(x):
 ```
 
 2. swish
+```python
+def swish(x):
+    return x * tf.nn.sigmoid(x)
+```
+
 3. swish_beta
+```python
+    beta=tf.Variable(initial_value=1.0,trainable=True, name='swish_beta')
+    return x * tf.nn.sigmoid(beta * x) #trainable parameter beta
+```
+
 4. mish
+```python
+def mish(x):
+    return x * tf.math.tanh(tf.math.softplus(x))
+```
 
 
 ## Requirement
