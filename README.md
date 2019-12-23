@@ -3,7 +3,7 @@
 본 repository에서는 Google의 [T5(T5: Text-To-Text Transfer Transformer)](https://arxiv.org/abs/1910.10683)의 text-to-text 형태로 한국어 QA Task를 위한 Transformer 모델입니다. 전체 모델의 아키텍처는 기본 Transformer 모델을 사용했습니다.
 
 ```
-pip install transformer-korean==0.0.1
+pip install transformer-korean
 ```
 
 * Text-to-Text Transformer-Base, Korean Model: 12-layer, 768-hidden, 12-heads(학습 모델 비공개)
