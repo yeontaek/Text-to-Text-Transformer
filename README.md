@@ -96,8 +96,8 @@ trainer = Trainer(train_dataset=train_dataset,
                   optimizer=optimizer,
                   transformer=transformer,
                   epochs=EPOCHS,
-                  checkpoint_path='./models/checkpoints/',
-                  load_checkpoints=True,
+                  checkpoint_path='./checkpoints/',
+                  load_checkpoints=False,
                   save_checkpoints_epochs=10)
 trainer.train()
 ```
@@ -176,7 +176,7 @@ trainer = Trainer(train_dataset=train_dataset,
                   optimizer=optimizer,
                   transformer=transformer,
                   epochs=EPOCHS,
-                  checkpoint_path='./models/checkpoints/',
+                  checkpoint_path='./checkpoints/',
                   load_checkpoints=True,
                   save_checkpoints_epochs=10)
 
@@ -221,9 +221,9 @@ pandas == 0.24.2 <br>
 
 
 ## 5. To-Do
-- [x] TPU, Multi-GPU 지원
-- [ ] Dropout 수정
-
+- [x] TPU, Multi-GPU 지원 예정
+- [X] Dropout 수정 예정
+- [X] Predict 모듈 추가 예정
 
 ## 6. Reference
 
