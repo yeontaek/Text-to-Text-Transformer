@@ -1,6 +1,6 @@
 # Text-to-Text Transformer
 
-본 repository에서는 Google의 [T5(T5: Text-To-Text Transfer Transformer)](https://arxiv.org/abs/1910.10683)의 text-to-text 형태로 한국어 QA Task를 해결하고자 한다. 전체 모델의 아키텍처는 Transformer 모델을 사용했다. 
+본 repository에서는 Google의 [T5(T5: Text-To-Text Transfer Transformer)](https://arxiv.org/abs/1910.10683)의 text-to-text 형태로 한국어 QA Task를 위한 Transformer 모델입니다. 전체 모델의 아키텍처는 기본 Transformer 모델을 사용했습니다. 
 
 * Text-to-Text Transformer-Base, Korean Model: 12-layer, 768-hidden, 12-heads(비공개)
 * Text-to-Text Transformer-Small, Korean Model: 6-layer, 512-hidden, 8-heads(비공개)
@@ -14,7 +14,7 @@
 
 ### 1.1 Unsupervised objective
 
-T5 논문에서 가장 성능이 잘 나온다고 서술된 BERT Style Objective로 문장을 구성하여 사전 학습을 진행했다. BERT와 동일하게 입력 문장의 15%를 Random 하게 마스킹 처리했다. 마스킹 대상의 80%는 <MASK>토큰으로 대체하며, 10%는 사전 내 임의의 토큰으로 나머지 10%는 원래의 단어를 그대로 사용했다.
+T5 논문에서 가장 성능이 잘 나온다고 서술된 BERT Style Objective로 문장을 구성하여, Pre-training 하도록 구성했습니다. BERT와 동일하게 입력 문장의 15%를 Random 하게 마스킹 처리했습니다. 마스킹 대상의 80%는 <MASK>토큰으로 대체하며, 10%는 사전 내 임의의 토큰으로 나머지 10%는 원래의 단어를 그대로 사용했습니다.
 
 <img src = "https://yhdosu.github.io/assets/images/T5/T5_6.png" width=80%>
 <img src = "https://yhdosu.github.io/assets/images/T5/T5_7.png" width=80%>
@@ -31,7 +31,7 @@ Target 문장 : 1900년, 사르두의 연극은 푸치니의 오페라 토스카
 
 
 ### 1.3 Unlabeld dataset
-학습 데이터는 **한국어 위키데이터(2019.01 dump file 기준, 약 350만 문장)** 을 사용하여 학습을 진행했다. 
+학습 데이터는 **한국어 위키데이터(2019.01 dump file 기준, 약 350만 문장)** 을 사용하여 학습을 진행했으며, 학습 문장 구성은 아래와 같습니다.  
  
 ~~~
 라 토스카(La Tosca)는 1887년에 프랑스 극작가 사르두가 배우 사라 베르나르를 위해 만든 작품이다.
