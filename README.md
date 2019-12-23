@@ -57,12 +57,15 @@ pip install transformer-korea
 
 
 ## Requirement
-
+Python 3.7.3
+tensorflow 2.1.0rc1
+tensorflow-datasets 1.3.2 
+pandas 0.24.2
 
 
 ## To-Do
 - [x] TPU, Multi-GPU 지원
-- [ ] this is an incomplete item 
+- [ ] Dropout 수정
 
 
 ## Reference
