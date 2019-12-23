@@ -168,7 +168,7 @@ trainer.train()
 
 
 ## Activation Function
-기본 relu activation function 외에 4가지 activation function 추가
+기본 relu activation function 외에 4개의 activation function 추가하였으며, Encoder와 Decoder 블럭에 서로 다른 activation function이 사용 가능하도록 했습니다  
 
 1. gelu
 ```python
