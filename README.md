@@ -51,7 +51,6 @@ Target 문장 : 1900년, 사르두의 연극은 푸치니의 오페라 토스카
 ### 1.4 학습 예
 
 ```python
-pip install transformer-korea
 
 path = "ko-wiki_20190621.txt"
 # Data Processing
