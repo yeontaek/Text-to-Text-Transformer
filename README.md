@@ -67,4 +67,6 @@ pip install transformer-korea
 * [Attention Is All You Need](https://arxiv.org/abs/1706.03762)<br>
 * [Chatbot using Tensorflow (Model is transformer) ko](https://github.com/changwookjun/Transformer)<br>
 * [TensorFlow code and pre-trained models for BERT](https://github.com/google-research/bert)
+* [TransformerModel](https://github.com/zbloss/TransformerModel)
+* [Transformer model for language understanding](https://www.tensorflow.org/tutorials/text/transformer)
 
