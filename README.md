@@ -103,11 +103,9 @@ trainer.train()
 ```
 
 
-## Fine-Tuning
+## 2.Fine-Tuning(QA Task)
 
-### 1.QA Task
-
-### 1.1 Labeld dataset
+### 2.1 Labeld dataset
 QA Task를 위해 한국어 QA Dataset인 [KorQuAD 1.1](https://korquad.github.io/category/1.0_KOR.html)을 사용하여 Fine-Tuning 하도록 구성했습니다. 데이터 구성은 아래와 같습니다. input은 question, target은 answer가 되도록 했습니다. 
 
 ~~~
@@ -130,7 +128,7 @@ A
 ~~~
 
 
-### 1.2 학습 예
+### 2.2 학습 예
 
 ```python
 question = "KorQuAD_train_q.csv"
@@ -186,7 +184,7 @@ trainer.train()
 ```
 
 
-## Activation Function
+## 3. Activation Function
 기본 relu activation function 외에 4개의 activation function 추가하였으며, Encoder와 Decoder 블럭에 서로 다른 activation function이 사용 가능하도록 했습니다  
 
 1. gelu
@@ -215,19 +213,19 @@ def mish(x):
 ```
 
 
-## Requirement
+## 4. Requirement
 Python == 3.x <br>
 tensorflow >= 2.X <br>
 tensorflow-datasets == 1.3.2 <br>
 pandas == 0.24.2 <br>
 
 
-## To-Do
+## 5. To-Do
 - [x] TPU, Multi-GPU 지원
 - [ ] Dropout 수정
 
 
-## Reference
+## 6. Reference
 
 * [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/abs/1910.10683)<br>
 * [Attention Is All You Need](https://arxiv.org/abs/1706.03762)<br>
