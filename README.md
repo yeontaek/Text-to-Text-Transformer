@@ -219,6 +219,7 @@ tensorflow >=2.0 <br>
 tensorflow-datasets >= 1.3.2 <br>
 pandas >= 0.24.2 <br>
 numpy >= 1.16.3 <br>
+six>=1.12.0
 
 
 ## 5. To-Do
