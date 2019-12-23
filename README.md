@@ -60,7 +60,7 @@ pip install transformer-korea
 
 
 
-## To-DO
+## To-Do
 - [x] TPU, Multi-GPU 지원
 - [ ] this is an incomplete item 
 
