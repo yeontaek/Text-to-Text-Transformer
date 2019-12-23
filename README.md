@@ -61,7 +61,7 @@ pip install transformer-korea
 
 
 ## Activation Function
-기본 relu 외에 4가지 activation function을 추가하였습니다. 
+기본 relu activation function 외에 4가지 activation function 추가
 
 1. gelu
 ```python
