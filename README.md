@@ -69,7 +69,6 @@ vocab = data_preprocess.load_vocab_file(vocab_filename="vocab")
 print('Create train dataset')
 train_dataset = data_preprocess.preprocess(train)
 
-# HPARAMS
 EPOCHS = 100
 num_layers = 6
 d_model = 128
@@ -156,7 +155,6 @@ vocab = data_preprocess.load_vocab_file(vocab_filename="vocab")
 print('Create train dataset')
 train_dataset = data_preprocess.preprocess(train)
 
-# HPARAMS
 EPOCHS = 100
 num_layers = 6
 d_model = 128
