@@ -51,6 +51,11 @@ Target 문장 : 1900년, 사르두의 연극은 푸치니의 오페라 토스카
 ### 1.4 학습 예
 
 ```python
+from transformer_korean.run_training import Trainer
+from transformer_korean.transformer import Transformer
+from transformer_korean.preprocess import DataProcessor
+from transformer_korean.custom_scheduler import CustomSchedule
+import tensorflow as tf
 
 path = "ko-wiki_20190621.txt"
 # Data Processing
@@ -130,6 +135,13 @@ A
 ### 2.2 학습 예
 
 ```python
+from transformer_korean.run_training import Trainer
+from transformer_korean.transformer import Transformer
+from transformer_korean.preprocess import DataProcessor
+from transformer_korean.custom_scheduler import CustomSchedule
+
+import tensorflow as tf
+
 question = "KorQuAD_train_q.csv"
 answer = "KorQuAD_train_a.csv"
 
