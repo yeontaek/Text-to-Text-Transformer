@@ -55,6 +55,25 @@ pip install transformer-korea
 
 ### 1.QA Task
 
+<br>
+<br>
+<br>
+
+
+## Activation Function
+기본 relu 외에 4가지 activation function을 추가하였습니다. 
+
+1. gelu
+```python
+def gelu(x):
+  cdf = 0.5 * (1.0 + tf.tanh((np.sqrt(2 / np.pi) * (x + 0.044715 * tf.pow(x, 3)))))
+  return x * cdf
+```
+
+2. swish
+3. swish_beta
+4. mish
+
 
 ## Requirement
 Python == 3.x <br>
