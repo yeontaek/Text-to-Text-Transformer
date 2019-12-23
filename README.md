@@ -92,7 +92,7 @@ trainer = Trainer(train_dataset=train_dataset,
                   transformer=transformer,
                   epochs=EPOCHS,
                   checkpoint_path='./models/checkpoints/',
-                  load_checkpoints=True,
+                  load_checkpoints=False,
                   save_checkpoints_epochs=10)
 trainer.train()
 ```
@@ -102,9 +102,65 @@ trainer.train()
 
 ### 1.QA Task
 
+### 1.1 Labeld dataset
+
 <br>
 <br>
 <br>
+
+
+### 1.2 학습 예
+
+```python
+question = "KorQuAD_train_q.csv"
+answer = "KorQuAD_train_a.csv"
+
+# Data Processing
+print('Loading fine-tuning data')
+data_preprocess = DataProcessor(csv_path=[question, answer],batch_size=64, pre_train=False)
+train = data_preprocess.load_data_csv()
+
+print('Loading Vocab File')
+vocab = data_preprocess.load_vocab_file(vocab_filename="vocab")
+
+print('Create train dataset')
+train_dataset = data_preprocess.preprocess(train)
+
+# HPARAMS
+EPOCHS = 100
+num_layers = 6
+d_model = 128
+dff = 512
+num_heads = 8
+vocab_size = vocab.vocab_size
+dropout_rate = 0.1
+
+# Custom Scheduler
+learning_rate = CustomSchedule(d_model, warmup_steps=4000)
+optimizer = tf.keras.optimizers.Adam(learning_rate, beta_1=0.9, beta_2=0.98, epsilon=1e-9)
+
+# Transformer
+transformer = Transformer(d_model=d_model,
+                          num_heads=num_heads,
+                          num_layers=num_layers,
+                          vocab_size=vocab_size,
+                          dff=dff,
+                          enc_activation = 'gelu',
+                          dec_activation = 'relu',
+                          rate=dropout_rate)
+
+# Trainer
+trainer = Trainer(train_dataset=train_dataset,
+                  learning_rate=learning_rate,
+                  optimizer=optimizer,
+                  transformer=transformer,
+                  epochs=EPOCHS,
+                  checkpoint_path='./models/checkpoints/',
+                  load_checkpoints=True,
+                  save_checkpoints_epochs=10)
+
+trainer.train()
+```
 
 
 ## Activation Function
