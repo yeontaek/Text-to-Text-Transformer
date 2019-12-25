@@ -11,9 +11,10 @@ pip install transformer-korean
 * 2019.12.23 0.0.1 :  최초 릴리즈
 
 
+## 0. Pre-training Model
 
-* Text-to-Text Transformer-Base, Korean Model: 12-layer, 768-hidden, 12-heads(학습 모델 비공개)
-* Text-to-Text Transformer-Small, Korean Model: 6-layer, 512-hidden, 8-heads(학습 모델 비공개)
+* Text-to-Text Transformer-Base, Korean Model: 12-layer, 768-hidden, 12-heads(비공개)
+* Text-to-Text Transformer-Small, Korean Model: 6-layer, 512-hidden, 8-heads(비공개)
 
 
 > Base This is our baseline model, whose hyperparameters are described in Section 3.1.1. It has roughly 220million parameters.
