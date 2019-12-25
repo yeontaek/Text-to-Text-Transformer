@@ -211,6 +211,7 @@ def swish(x):
 
 3. swish_beta
 ```python
+def swish_beta(x):
     beta=tf.Variable(initial_value=1.0,trainable=True, name='swish_beta')
     return x * tf.nn.sigmoid(beta * x) #trainable parameter beta
 ```
