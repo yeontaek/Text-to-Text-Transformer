@@ -9,6 +9,7 @@ pip install transformer-korean
 
 * 2019.12.25, 0.0.3 : masked_lm_prob 옵션 추가 
 * 2019.12.23, 0.0.1 :  최초 릴리즈
+<br>
 
 
 ## 0. Pre-training Model
