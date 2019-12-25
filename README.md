@@ -7,8 +7,8 @@ pip install transformer-korean
 
 ```
 
-* 2019.12.25, 0.0.3 : load_data_txt, load_data_csv 오류 수정 
-* 2019.12.23, 0.0.1 :  최초 릴리즈
+* 2019.12.25, version 0.0.3 : load_data_txt, load_data_csv 오류 수정 
+* 2019.12.23, version 0.0.1 :  최초 릴리즈
 <br>
 
 
