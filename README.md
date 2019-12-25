@@ -4,7 +4,6 @@
 
 ```
 pip install transformer-korean
-
 ```
 
 * 2019.12.25, version 0.0.3 : load_data_txt, load_data_csv 오류 수정 
