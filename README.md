@@ -60,7 +60,10 @@ import tensorflow as tf
 path = "ko-wiki_20190621.txt"
 # Data Processing
 print('Loading Pre-training data')
-data_preprocess = DataProcessor(txt_path=path, batch_size=64, pre_train=True)
+data_preprocess = DataProcessor(txt_path=path,
+                                batch_size=64,
+                                pre_train=True,
+                                max_length=128)
 train = data_preprocess.load_data_txt()
 
 print('Loading Vocab File')
@@ -146,7 +149,10 @@ answer = "KorQuAD_train_a.csv"
 
 # Data Processing
 print('Loading fine-tuning data')
-data_preprocess = DataProcessor(csv_path=[question, answer],batch_size=64, pre_train=False)
+data_preprocess = DataProcessor(csv_path=[question, answer],
+                                batch_size=64,
+                                pre_train=False,
+                                max_length= 128)
 train = data_preprocess.load_data_csv()
 
 print('Loading Vocab File')
