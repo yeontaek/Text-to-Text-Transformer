@@ -4,7 +4,14 @@
 
 ```
 pip install transformer-korean
+
+
+0.0.3 : masked_lm_prob 옵션 추가 
+0.0.1 : 2019.12.23 최초 릴리즈
+
 ```
+
+
 
 * Text-to-Text Transformer-Base, Korean Model: 12-layer, 768-hidden, 12-heads(학습 모델 비공개)
 * Text-to-Text Transformer-Small, Korean Model: 6-layer, 512-hidden, 8-heads(학습 모델 비공개)
