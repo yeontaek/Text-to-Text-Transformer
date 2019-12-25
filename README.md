@@ -216,7 +216,7 @@ def swish_beta(x):
     return x * tf.nn.sigmoid(beta * x) #trainable parameter beta
 ```
 
-4. mish
+4. [mish](https://github.com/digantamisra98/Mish)
 ```python
 def mish(x):
     return x * tf.math.tanh(tf.math.softplus(x))
